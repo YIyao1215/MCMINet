@@ -12,8 +12,6 @@ learning with proxy-based representation learning.
 
 ## Installation
 
-Python 3.10 or newer is required.
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -29,30 +27,6 @@ Prepare a patient-level manifest with one row per patient containing:
 
 Real patient data are not distributed with this repository.
 Prepare the manifest using paths to your own data.
-
-## Training
-
-Training settings are defined in `configs/default.yaml`.
-
-| Parameter | Setting |
-|---|---|
-| Optimizer | AdamW |
-| Batch size | 8 |
-| Maximum epochs | 100 |
-| MRI pretrained backbone learning rate | 1e-5 |
-| Newly initialized layers / GAT / classifier learning rate | 1e-4 |
-| Proxy learning rate | 5e-5 |
-| Weight decay | 1e-3; zero for biases, BatchNorm affine parameters, and proxies |
-
-| Objective component | Temperature | Loss weight |
-|---|---|---|
-| Classification | — | 1.0 |
-| Intra-modal | 0.10 | 0.20 |
-| Cross-modal | 0.07 | 0.30 |
-| Hybrid proxy | 0.07 | 0.30 |
-| Modality-specific proxy | 0.10 | 0.20 |
-
-The best checkpoint is selected by the highest internal-validation AUROC.
 
 ## Evaluation
 
