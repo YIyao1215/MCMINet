@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools==78.1.1", "wheel==0.40.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "mcminet"
+version = "0.1.0"
+description = "Multimodal MRI and whole-slide image model for binary response research"
+requires-python = ">=3.10"
+# Exact observed code-execution versions; see DEPENDENCY_AUDIT.md for platform limits.
+# Python >=3.10 describes the source syntax minimum, not a guarantee that this
+# observed binary snapshot can be installed on every newer Python/platform.
+dependencies = [
+  "torch==2.7.0",
+  "torchvision==0.22.0",
+  "torch-geometric==2.6.1",
+  "numpy==1.26.4",
+  "scipy==1.15.3",
+  "pydicom==3.0.2",
+  "nibabel==5.4.2",
+  "Pillow==11.3.0",
+  "PyYAML==6.0.3",
+  "shapely==2.1.2",
+]
+
+[project.optional-dependencies]
+wsi = ["openslide-python==1.4.2", "openslide-bin==4.0.0.8"]
+dev = ["pytest==9.1.1", "setuptools==78.1.1", "wheel==0.40.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mcminet = ["default.yaml"]

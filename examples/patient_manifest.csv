@@ -1,0 +1,3 @@
+patient_id,mri_dir,tumor_mask,lymph_node_mask,wsi_path,annotation_path,label
+P001,/path/to/P001/MRI,/path/to/P001/tumor.nii.gz,/path/to/P001/lymph_node.nii.gz,/path/to/P001/slide.ndpi,/path/to/P001/annotation.geojson,0
+P002,/path/to/P002/MRI,/path/to/P002/tumor.nii.gz,/path/to/P002/lymph_node.nii.gz,/path/to/P002/slide.ndpi,/path/to/P002/annotation.geojson,1

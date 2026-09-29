@@ -1,0 +1,13 @@
+torch==2.7.0
+torchvision==0.22.0
+torch-geometric==2.6.1
+numpy==1.26.4
+scipy==1.15.3
+pydicom==3.0.2
+nibabel==5.4.2
+Pillow==11.3.0
+PyYAML==6.0.3
+shapely==2.1.2
+openslide-python==1.4.2
+openslide-bin==4.0.0.8
+pytest==9.1.1

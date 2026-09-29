@@ -1,0 +1,1 @@
+The example manifest demonstrates the expected data organization for two de-identified example patients. Raw medical images are not distributed with this repository. The example script validates the manifest and exits safely when placeholder paths are absent; it does not produce clinical predictions or performance metrics.

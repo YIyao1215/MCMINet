@@ -1,0 +1,4 @@
+# Same scientific candidate; only the local placeholder path differs.
+extends: default.yaml
+data:
+  manifest: examples/patient_manifest.csv
